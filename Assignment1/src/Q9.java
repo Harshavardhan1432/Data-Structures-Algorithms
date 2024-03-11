@@ -31,9 +31,10 @@ public class Q9 {
         int columns = m[0].length;
         double sum = 0;
             for (int i = 0; i < rows; i++) {
-                for (int j = 0; j < columns; j++)
+                for (int j = 0; j < columns; j++) {
                     if (i == j)
                         sum += m[i][j];
+                }
             }
         return sum;
     }
