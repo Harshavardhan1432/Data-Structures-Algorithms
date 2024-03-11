@@ -8,25 +8,26 @@ public class Q9 {
         int columns = hv.nextInt();
 
         int[][] arr = new int[rows][columns];
-        for (int i = 0; i < rows; i++) {
-            for (int j = 0; j < columns; j++)
-                arr[i][j] = hv.nextInt();
+        if(rows == columns) {
+            for (int i = 0; i < rows; i++) {
+                for (int j = 0; j < columns; j++)
+                    arr[i][j] = hv.nextInt();
+            }
         }
+        else
+            System.out.println("To get the diagonal sum, no. of rows should be equal to no. of columns");
 
+        int sum = 0;
         System.out.println("The following 2D Matrix");
-        for (int i = 0; i < rows; i++) {
-            for (int j = 0; j < columns; j++)
-                System.out.print(arr[i][j] + "\t");
-            System.out.println();
-        }
-
-        int sum1 = 0;
         for (int i = 0; i < rows; i++) {
             for (int j = 0; j < columns; j++) {
                 if (i == j)
-                    sum1 += arr[i][j];
+                    sum += arr[i][j];
+                System.out.print(arr[i][j] + "\t");
             }
+            System.out.println();
         }
-        System.out.println("Diagonal Sum : " + sum1);
+
+        System.out.println("Diagonal Sum : " + sum);
     }
 }
