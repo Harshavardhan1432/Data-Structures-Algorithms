@@ -7,7 +7,7 @@ public class Q9 {
         System.out.print("Enter the values of columns : ");
         int columns = hv.nextInt();
 
-        int[][] arr = new int[rows][columns];
+        double[][] arr = new double[rows][columns];
         if(rows == columns) {
             for (int i = 0; i < rows; i++) {
                 for (int j = 0; j < columns; j++)
@@ -17,17 +17,24 @@ public class Q9 {
         else
             System.out.println("To get the diagonal sum, no. of rows should be equal to no. of columns");
 
-        int sum = 0;
         System.out.println("The following 2D Matrix");
         for (int i = 0; i < rows; i++) {
-            for (int j = 0; j < columns; j++) {
-                if (i == j)
-                    sum += arr[i][j];
+            for (int j = 0; j < columns; j++)
                 System.out.print(arr[i][j] + "\t");
-            }
             System.out.println();
         }
 
-        System.out.println("Diagonal Sum : " + sum);
+        System.out.println("Diagonal Sum : " + sumMajorDiagonal(arr));
+    }
+    public static double sumMajorDiagonal(double[][] m) {
+        int rows = m.length;
+        int columns = m[0].length;
+        double sum = 0;
+            for (int i = 0; i < rows; i++) {
+                for (int j = 0; j < columns; j++)
+                    if (i == j)
+                        sum += m[i][j];
+            }
+        return sum;
     }
 }
