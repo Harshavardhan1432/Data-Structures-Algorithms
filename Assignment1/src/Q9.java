@@ -11,7 +11,7 @@ public class Q9 {
         if(rows == columns) {
             for (int i = 0; i < rows; i++) {
                 for (int j = 0; j < columns; j++)
-                    arr[i][j] = hv.nextInt();
+                    arr[i][j] = hv.nextDouble();
             }
         }
         else
