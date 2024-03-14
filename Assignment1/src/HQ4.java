@@ -17,7 +17,7 @@ public class HQ4 {
                 a[i][j] = hv.nextDouble();
         }
 
-        System.out.println("Enter the values of 1st matrix : ");
+        System.out.println("Enter the values of 2nd matrix : ");
         for (int i = 0; i < rows; i++)
         {
             for (int j = 0; j < columns; j++)
