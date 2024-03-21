@@ -29,8 +29,8 @@ public class Q1 {
 		p1.displayData();
 		p2.displayData();
 		if (p1.age > p2.age)
-			System.out.println(p1.name + " is older " + p2.name);
+			System.out.println(p1.name + " is older than " + p2.name);
 		else
-			System.out.println(p2.name + " is older " + p1.name);
+			System.out.println(p1.name + " is younger than " + p2.name);
 	}
 }
