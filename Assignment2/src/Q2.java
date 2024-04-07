@@ -1,39 +1,43 @@
 import java.util.Scanner;
-class complex
-{
-	double real;
-	double imag;
-	public void setData()
-	{
-		Scanner hv = new Scanner(System.in);
-		System.out.println("Enter the real part : ");
-		real = hv.nextDouble();
-		System.out.println("Enter the imaginary part :");
-		imag = hv.nextDouble();
-		hv.close();
-	}
-	public void displayData()
-	{
-		System.out.println("Complex : " + real + " Imaginary " + imag + "i");
-	}
-	public static complex add(complex c1, complex c2)
-	{
-		complex result = new complex();
-		result.real = c1.real + c2.real;
-		result.imag = c1.imag + c2.imag;
-		return result;
-	}
+
+class complex {
+    int real;
+    int imaginary;
+
+    void setData() {
+        Scanner hv = new Scanner(System.in);
+        System.out.println("Enter value of real part");
+        real = hv.nextInt();
+        System.out.println("Enter value of imaginary part");
+        imaginary = hv.nextInt();
+    }
+
+    void display() {
+        System.out.println(real + " + " + imaginary + " i ");
+    }
+
+    complex add(complex c1, complex c2) {
+        complex c3 = new complex();
+        c3.real = c1.real + c2.real;
+        c3.imaginary = c1.imaginary + c2.imaginary;
+        return c3;
+    }
 }
+
 public class Q2 {
-	public static void main(String [] args)
-	{
-		complex comp = new complex();
-		complex comp2 = new complex();
-		comp.setData();
-		comp2.setData();
-		comp.displayData();
-		comp2.displayData();
-		complex sum = complex.add(comp, comp2);
-		sum.displayData();
-	}
+    public static void main(String[] args) {
+        complex c1 = new complex();
+        c1.real = 2;
+        c1.imaginary = 5;
+        c1.display();
+
+        complex c2 = new complex();
+        c2.setData();
+        c2.display();
+
+        complex c = new complex();
+        c = c.add(c1, c2);
+        System.out.println("Addition of c1 and c2 is ");
+        c.display();
+    }
 }
