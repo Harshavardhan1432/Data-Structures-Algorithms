@@ -1,0 +1,1 @@
+//For Question 3class MarksOutOfBoundException extends Exception{    public MarksOutOfBoundException(String message) {        super(message);    }}

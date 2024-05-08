@@ -1,0 +1,1 @@
+// For Question 3class Student{    String name;    int marks;    Student(String a, int m)  {        name=a;        marks=m;    }}
