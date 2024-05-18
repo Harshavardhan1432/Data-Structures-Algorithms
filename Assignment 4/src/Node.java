@@ -1,1 +1,0 @@
-public class Node {    int regNo;    float marks;    Node next;    Node(int regNo, float marks) {        this.regNo = regNo;        this.marks = marks;        this.next = null;    }}
